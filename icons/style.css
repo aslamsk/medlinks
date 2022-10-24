@@ -233,22 +233,22 @@
   content: "\e90f";
 }
 .icon-plus:before {
-  content: "\002B";
+  content: "\e931";
   font-weight: 600;
    color: blue;
-   font-size: 20px;
+   font-size: 10px;
 }
-.icon-minus{
+/* .icon-minus{
   margin-bottom: 24px;
 }
 .icon-plus{
   margin-bottom: 24px;
-}
+} */
 .icon-minus:before {
-  content: "\207B";
+  content: "\e932";
    font-weight: 600;
    color: blue;
-   font-size: 30px;
+   font-size: 10px;
 }
 .icon-google-plus1:before {
   content: "\e911";

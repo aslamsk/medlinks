@@ -1400,13 +1400,15 @@ var acc = document.getElementsByClassName("accordion");
 		if (panel.style.display === "block") {
 		  	panel.style.display = "none";
 			var element = document.querySelector(".icon-minus");
+			if(panel.style.display === "none"){
 			element.classList.remove("icon-minus");
-			element.classList.add("icon-plus");
+			element.classList.add("icon-plus");}
 		} else {
 		  panel.style.display = "block";
 			var element = document.querySelector(".icon-plus");
-			element.classList.add("icon-minus");
+			if(panel.style.display === "block"){
 			element.classList.remove("icon-plus");
+			element.classList.add("icon-minus");}
 		}
 	  });
 	}

@@ -7356,7 +7356,12 @@ ul.marker-list-md {
       position: absolute;
       left: 0;
       top: 1px;
-      color: #3368c6; }
+      color: #3368c6; 
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 5px;
+  }
   ul.marker-list-md li:not(:last-child) {
     margin-bottom: 16px; }
     @media (max-width: 1023px) {
@@ -12803,7 +12808,14 @@ body.noScroll {
   .service-card-style2 > ul.marker-list-md:not(:first-child) {
     margin-top: 15px; }
   .service-card-style2 ul.marker-list-md li {
-    font-size: 16px; }
+    font-size: 16px; 
+    background: #f7f7f7;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+  }
     @media (max-width: 1023px) {
       .service-card-style2 ul.marker-list-md li {
         font-size: 15px;
@@ -19439,8 +19451,8 @@ ul.category-list {
   .panel {
     padding: 0 18px;
     display: none;
-    background-color: white;
+    background-color: #f7f7f7;
     overflow: hidden;
     transition: 0.4s;
-
+    margin-top: -16px;
   }
