@@ -12814,14 +12814,15 @@ body.noScroll {
     display: flex;
     align-items: center;
     padding: 20px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 5%);
+
 }
-  }
     @media (max-width: 1023px) {
       .service-card-style2 ul.marker-list-md li {
         font-size: 15px;
         line-height: 20px; } }
   .service-card-style2 ul.marker-list-md li:not(:last-child) {
-    margin-bottom: 16px; }
+    margin-bottom: 1px; }
     @media (max-width: 1023px) {
       .service-card-style2 ul.marker-list-md li:not(:last-child) {
         margin-bottom: 8px; } }
@@ -19456,3 +19457,49 @@ ul.category-list {
     transition: 0.4s;
     margin-top: -16px;
   }
+
+  .accordion {
+    width: 100%;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+  }
+  
+  .accordion:after {
+    font-family: FontAwesome;
+    content: "\f107";
+    font-size: 18px;
+    float: right;
+    position: absolute;
+    right: 11px;
+    font-family: "fontawesome";
+  }
+  
+
+  .accordion.is-open:after {
+    content: "\f106";
+    font-size: 18px;
+
+  }
+  
+  button.accordion:hover,
+  button.accordion.is-open {
+    background-color: #ddd;
+  }
+  
+  .accordion-content {
+    background-color: white;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding: 0 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+  }
+  

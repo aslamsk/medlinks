@@ -1390,25 +1390,46 @@ $(function () {
 	}));
 
 })
-var acc = document.getElementsByClassName("accordion");
-	var i;
+// var acc = document.getElementsByClassName("accordion");
+// 	var i;
 
-	for (i = 0; i < acc.length; i++) {
-	  acc[i].addEventListener("click", function() {
-		this.classList.toggle("active");
-		var panel = this.nextElementSibling;
-		if (panel.style.display === "block") {
-		  	panel.style.display = "none";
-			var element = document.querySelector(".icon-minus");
-			if(panel.style.display === "none"){
-			element.classList.remove("icon-minus");
-			element.classList.add("icon-plus");}
+// 	for (i = 0; i < acc.length; i++) {
+// 	  acc[i].addEventListener("click", function() {
+// 		this.classList.toggle("active");
+// 		var panel = this.nextElementSibling;
+// 		if (panel.style.display === "block") {
+// 		  	panel.style.display = "none";
+// 			var element = document.querySelector(".icon-minus");
+// 			if(panel.style.display === "none"){
+// 			element.classList.remove("icon-minus");
+// 			element.classList.add("icon-plus");}
+// 		} else {
+// 		  panel.style.display = "block";
+// 			var element = document.querySelector(".icon-plus");
+// 			if(panel.style.display === "block"){
+// 			element.classList.remove("icon-plus");
+// 			element.classList.add("icon-minus");}
+// 		}
+// 	  });
+// 	}
+
+	const accordionBtns = document.querySelectorAll(".accordion");
+
+	accordionBtns.forEach((accordion) => {
+	  accordion.onclick = function () {
+		this.classList.toggle("is-open");
+	
+		let content = this.nextElementSibling;
+		console.log('content', content);
+	
+		if (content.style.maxHeight) {
+		  //this is if the accordion is open
+		  content.style.maxHeight = null;
 		} else {
-		  panel.style.display = "block";
-			var element = document.querySelector(".icon-plus");
-			if(panel.style.display === "block"){
-			element.classList.remove("icon-plus");
-			element.classList.add("icon-minus");}
+		  //if the accordion is currently closed
+		  content.style.maxHeight = content.scrollHeight + "px";
+		  console.log(content.style.maxHeight);
 		}
-	  });
-	}
+	  };
+	});
+	
